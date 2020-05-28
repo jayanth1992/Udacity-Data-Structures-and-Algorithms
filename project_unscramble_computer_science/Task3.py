@@ -43,3 +43,45 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+
+
+def get_area_code(number):
+    if number[0] == '7' or number[0] == '8' or number[0] == '9':
+        return number[:4]
+    elif number[0] == '(':
+        return number[1:4]
+    else:
+        return '140'
+
+
+def find_out_going_numbers_codes(from_code):
+    codes = dict()
+
+    for i in calls:
+        if from_code in i[0]:
+            code = get_area_code(i[1])
+            count = codes.get(code, 0)
+            codes[code] = count+1
+
+    return codes
+
+
+def percentage_of_calls_made(from_code, to_code):
+
+    codes = find_out_going_numbers_codes(from_code)
+
+    count = codes[to_code]
+
+    total_count = sum(codes.values())
+
+    return round(count/total_count * 100, 2)
+
+
+result_a = find_out_going_numbers_codes('(080)')
+result_a = sorted(result_a.keys())
+
+for i in result_a:
+    print(i)
+
+result_b = percentage_of_calls_made('(080)', '080')
+print(f'{result_b} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.')

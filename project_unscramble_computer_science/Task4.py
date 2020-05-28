@@ -25,3 +25,20 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 
+calls_from_number = {x[0] for x in calls}
+calls_to_number = {x[1] for x in calls}
+
+texts_from_number = {x[0] for x in texts}
+texts_to_number = {x[1] for x in texts}
+
+result = set()
+
+for i in calls_from_number:
+
+    if i not in calls_to_number and i not in texts_from_number and i not in texts_to_number:
+        result.add(i)
+
+result = sorted(result)
+
+for i in result:
+    print(i)

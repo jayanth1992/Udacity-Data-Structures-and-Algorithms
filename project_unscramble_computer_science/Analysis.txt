@@ -1,0 +1,30 @@
+---------- Run Time Analysis -----------
+
+TASK 0:
+O(1)
+
+TASK 1:
+O(m+n)
+m - number of records in calls excel
+n - number of records in texts excel
+
+TASK 2:
+O(n)
+n - number of records in calls excel
+
+TASK 3:
+Part A - O(mlogm) / O(n) - which ever is greater will be the worst case. Because we are removing duplicates from n
+So the time complexity in this case will depend upon the number of duplicates
+Part B - O(n)
+m - size of unique records
+n - number of records
+
+Task 4:
+O(m+n) / O(xlogx) - which ever is greater will be time complexity. So the time complexity in this case will depend upon
+the number of duplicates
+x - unique records
+m - size of calls
+n - size of texts
+
+
+
