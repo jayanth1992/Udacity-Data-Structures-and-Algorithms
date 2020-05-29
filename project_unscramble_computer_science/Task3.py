@@ -49,7 +49,7 @@ def get_area_code(number):
     if number[0] == '7' or number[0] == '8' or number[0] == '9':
         return number[:4]
     elif number[0] == '(':
-        return number[1:4]
+        return number[1:number.index(')')]
     else:
         return '140'
 

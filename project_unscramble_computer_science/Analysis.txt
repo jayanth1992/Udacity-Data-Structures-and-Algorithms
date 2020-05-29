@@ -2,29 +2,31 @@
 
 TASK 0:
 O(1)
+The run time is constant because accessing an element in an array is O(1).
+Since we are getting first and last elements of tuple, we know the indexes upfront. So the time complexity is constant.
 
 TASK 1:
 O(m+n)
 m - number of records in calls excel
 n - number of records in texts excel
 
+I mentioned time complexity as m+n because the size of texts tuple and calls tuple can be different. If both texts tuple
+and calls tuple have same size all the time then time complexity will be O(n). Both O(m+n) and O(n) means the complexity
+is linear.
+
 TASK 2:
 O(n)
 n - number of records in calls excel
+The time complexity is linear to input size.
 
 TASK 3:
-Part A - O(mlogm) / O(n) - which ever is greater will be the worst case. Because we are removing duplicates from n
-So the time complexity in this case will depend upon the number of duplicates
-Part B - O(n)
-m - size of unique records
+Part A - O(nlogn) - n is the number of unique records in the input. The worst case for sorting algorithm is nlogn
+Part B - O(n) -  Time complexity is linear to input size.
 n - number of records
 
 Task 4:
-O(m+n) / O(xlogx) - which ever is greater will be time complexity. So the time complexity in this case will depend upon
-the number of duplicates
-x - unique records
-m - size of calls
-n - size of texts
+O(nlogn) - n is the number of unique records in the input. The worst case for sorting algorithm is nlogn
+n - size of input
 
 
 

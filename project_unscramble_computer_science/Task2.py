@@ -41,7 +41,7 @@ result = ''
 
 for k,v in call_time.items():
     if v > max_time:
-        max = v
+        max_time = v
         result = k
 
 
